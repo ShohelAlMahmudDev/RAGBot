@@ -26,15 +26,15 @@ page = pages[0]
 #print(page.metadata)
 
 #Load document from other datasources
-from langchain.document_loaders.generic import GenericLoader
+""" from langchain.document_loaders.generic import GenericLoader
 from langchain.document_loaders.parsers import OpenAIWhisperParser
 from langchain.document_loaders.blob_loaders.youtube_audio import YoutubeAudioLoader
 
 
-from langchain_community.document_loaders import WebBaseLoader
+from langchain_community.document_loaders import WebBaseLoader """
 
-loader = WebBaseLoader(
-    web_path = "https://www.espn.com/"
+#loader = WebBaseLoader(
+    #web_path = "https://www.espn.com/"
     # header_template = None,
     # verify_ssl = True,
     # proxies = None,
@@ -51,14 +51,14 @@ loader = WebBaseLoader(
     # session = None,
     # show_progress = True,
     # trust_env = False,
-)
+#clea)
 #Lazy load
-from bs4 import BeautifulSoup
-docs = []
-for doc in loader.lazy_load():
-    docs.append(doc)
-print(docs[0].page_content[:100])
-print(docs[0].metadata)
+# from bs4 import BeautifulSoup
+# docs = []
+# for doc in loader.lazy_load():
+#     docs.append(doc)
+# print(docs[0].page_content[:100])
+# print(docs[0].metadata)
 
 #Async Loader
 # docs = []
@@ -69,4 +69,26 @@ print(docs[0].metadata)
 
 
 #Document Splitting into chunks
+
+""" from langchain_text_splitters import RecursiveCharacterTextSplitter
+
+text_splitter = RecursiveCharacterTextSplitter(
+    chunk_size=1000,  # chunk size (characters)
+    chunk_overlap=200,  # chunk overlap (characters)
+    add_start_index=True,  # track index in original document
+) """
+#all_splits = text_splitter.split_documents(pages)
+
+""" print(f"Split blog post into {len(all_splits)} sub-documents.")
+for splittext in all_splits:
+    print(splittext) """
+
+text1 = "hello I am software developer. How can I assist you today" 
+
+from langchain_text_splitters import TokenTextSplitter
+
+text_splitter = TokenTextSplitter(chunk_size=10, chunk_overlap=0)
+
+texts = text_splitter.split_text(text1)
+print(texts)
 

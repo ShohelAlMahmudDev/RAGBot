@@ -1,2 +1,3 @@
 .env
 chatbotenv/
+.DS_Store
