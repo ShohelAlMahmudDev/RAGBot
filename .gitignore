@@ -1,4 +1,4 @@
 .env
 chatbotenv/
 .DS_Store
-docs
+docs/*
