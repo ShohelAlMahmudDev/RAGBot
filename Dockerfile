@@ -1,17 +1,23 @@
-# Use a lightweight Python image
-FROM python:3.12-slim
+# Use an official Python runtime as the base image
+FROM python:3.9-slim
 
-# Set working directory
+# Set the working directory in the container
 WORKDIR /app
 
-# Copy the application code, including static and template directories
-COPY app /app
+# Copy the requirements file into the container
+COPY requirements.txt .
 
-# Install dependencies
-RUN pip install fastapi uvicorn jinja2
+# Install the dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Expose FastAPI's default port
+# Copy the rest of the application code
+COPY . .
+
+# Expose the port the app runs on
 EXPOSE 8000
 
-# Start FastAPI
+# Set environment variables (if needed)
+ENV PYTHONUNBUFFERED=1
+
+# Run the application using Uvicorn
 CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8000"]
