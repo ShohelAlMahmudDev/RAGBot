@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot UI</title>
+    <title>Personal Chatbot</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="/static/index.css" rel="stylesheet">
 </head>
@@ -20,5 +20,14 @@
     <script src="/static/script.js">
         
     </script>
+
+  <footer class="chat-footer">
+    <p>© <span id="currentYear"></span> Shohel Al Mahmud. All Rights Reserved.</p>
+  </footer>
+  
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 </body>
+ 
 </html>
