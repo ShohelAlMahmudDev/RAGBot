@@ -1,3 +1,4 @@
+const baseUrl = window.location.origin;
 function sendMessage() {
     let userInput = document.getElementById("userInput");
     let message = userInput.value.trim();
@@ -69,7 +70,7 @@ function hideBotTyping() {
 }
 
 async function botReply(userMessage) {
-    let response = await fetch("http://localhost:8000/ask", {
+    let response = await fetch(baseUrl + "/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: userMessage })
