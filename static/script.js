@@ -21,21 +21,49 @@ function handleKeyPress(event) {
     }
 }
 
+// function appendMessage(sender, message, className) {
+//     let chatBox = document.getElementById("chatBox");
+//     let messageElement = document.createElement("div");
+//     messageElement.classList.add("chat-message", className);
+//     chatBox.appendChild(messageElement);
+//     //chatBox.scrollTop = chatBox.scrollHeight;
+//     const isScrolledToBottom = chatBox.scrollHeight - chatBox.clientHeight <= chatBox.scrollTop + 1;
+//     if (isScrolledToBottom) {
+//         chatBox.scrollTo({
+//             top: chatBox.scrollHeight,
+//             behavior: 'smooth'
+//         });
+//     }
+//     if (className === "user-message") {
+//         messageElement.innerHTML = message;
+//         return;
+//     }
+
+//     // Typing effect for bot messages
+//     let plainText = message.replace(/<\/?[^>]+(>|$)/g, ""); // Remove HTML tags for typing effect
+//     let index = 0;
+//     function typeNextCharacter() {
+//         if (index < plainText.length) {
+//             messageElement.textContent += plainText.charAt(index);
+//             index++;
+//             setTimeout(typeNextCharacter, 20); // Adjust speed if needed
+//         } else {
+//             messageElement.innerHTML = message; // Show formatted HTML after typing animation
+//         }
+//     }
+//     typeNextCharacter();
+// }
 function appendMessage(sender, message, className) {
     let chatBox = document.getElementById("chatBox");
     let messageElement = document.createElement("div");
     messageElement.classList.add("chat-message", className);
     chatBox.appendChild(messageElement);
-    //chatBox.scrollTop = chatBox.scrollHeight;
-    const isScrolledToBottom = chatBox.scrollHeight - chatBox.clientHeight <= chatBox.scrollTop + 1;
-    if (isScrolledToBottom) {
-        chatBox.scrollTo({
-            top: chatBox.scrollHeight,
-            behavior: 'smooth'
-        });
-    }
+
+    // Add user message immediately
     if (className === "user-message") {
         messageElement.innerHTML = message;
+        // Scroll to bottom after adding the message
+        scrollToBottom(chatBox);
         return;
     }
 
@@ -49,9 +77,22 @@ function appendMessage(sender, message, className) {
             setTimeout(typeNextCharacter, 20); // Adjust speed if needed
         } else {
             messageElement.innerHTML = message; // Show formatted HTML after typing animation
+            // Scroll to bottom after typing effect is complete
+            scrollToBottom(chatBox);
         }
     }
     typeNextCharacter();
+}
+
+// Helper function to scroll to the bottom of the chat box
+function scrollToBottom(chatBox) {
+    const isScrolledToBottom = chatBox.scrollHeight - chatBox.clientHeight <= chatBox.scrollTop + 1;
+    if (isScrolledToBottom) {
+        chatBox.scrollTo({
+            top: chatBox.scrollHeight,
+            behavior: 'smooth'
+        });
+    }
 }
 
 function showBotTyping() {
