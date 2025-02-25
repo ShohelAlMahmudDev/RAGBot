@@ -11,8 +11,8 @@ function sendMessage() {
 
     setTimeout(() => {
         botReply(message);
-        setTimeout(() => hideBotTyping(), 1000); // Delay hiding the animation
-    }, 10);
+        setTimeout(() => hideBotTyping(), 2000); // Delay hiding the animation
+    }, 100);
 }
 
 function handleKeyPress(event) {
@@ -27,11 +27,13 @@ function appendMessage(sender, message, className) {
     messageElement.classList.add("chat-message", className);
     chatBox.appendChild(messageElement);
     //chatBox.scrollTop = chatBox.scrollHeight;
-    // Smooth scroll to the bottom
-    chatBox.scrollTo({
-        top: chatBox.scrollHeight,
-        behavior: 'smooth'
-    });
+    const isScrolledToBottom = chatBox.scrollHeight - chatBox.clientHeight <= chatBox.scrollTop + 1;
+    if (isScrolledToBottom) {
+        chatBox.scrollTo({
+            top: chatBox.scrollHeight,
+            behavior: 'smooth'
+        });
+    }
     if (className === "user-message") {
         messageElement.innerHTML = message;
         return;
