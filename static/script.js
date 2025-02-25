@@ -26,8 +26,12 @@ function appendMessage(sender, message, className) {
     let messageElement = document.createElement("div");
     messageElement.classList.add("chat-message", className);
     chatBox.appendChild(messageElement);
-    chatBox.scrollTop = chatBox.scrollHeight;
-
+    //chatBox.scrollTop = chatBox.scrollHeight;
+    // Smooth scroll to the bottom
+    chatBox.scrollTo({
+        top: chatBox.scrollHeight,
+        behavior: 'smooth'
+    });
     if (className === "user-message") {
         messageElement.innerHTML = message;
         return;
@@ -81,6 +85,7 @@ async function botReply(userMessage) {
     const output = answers.map(answer => `${answer}`).join("");
     
     let formattedResponse = formatMessage(output); // Format response dynamically
+     
     appendMessage("Bot", formattedResponse, "bot-message");
 }
 
@@ -105,4 +110,4 @@ function formatMessage(text) {
     }
 
     return formattedText;
-}
+} 
