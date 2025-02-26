@@ -173,7 +173,7 @@ This project is licensed under the [MIT License](LICENSE).
 ## Contact
 For questions, suggestions, or contributions, please reach out:
 - **Project Maintainer:** [ShohelAlMahmudDev](https://github.com/ShohelAlMahmudDev)
-- **Email:** your-email@example.com  *(Replace with your actual email address)*
+- **Email:** shohelcse@yahoo.com
 ```
 
 ---
