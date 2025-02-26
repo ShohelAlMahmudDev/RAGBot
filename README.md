@@ -1,5 +1,3 @@
-Below is a comprehensive **README.md** file tailored to your [RAGBot repository](https://github.com/ShohelAlMahmudDev/RAGBot). This file covers both the frontend and backend technologies you’re using and provides clear instructions for installation, configuration, and usage. Feel free to adjust details to match any additional project specifics:
-
 # RAGBot: AI Chatbot with Software Engineer Expertise
 
 RAGBot is an innovative AI chatbot designed to simulate a Software Engineer’s expertise. By utilizing profile data, RAGBot provides personalized, technical, and career-focused advice. The chatbot leverages advanced natural language processing techniques combined with retrieval-augmented generation to generate context-aware responses.
