@@ -9,7 +9,6 @@ RAGBot is an innovative AI chatbot designed to simulate a Software Engineer’s 
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
 
