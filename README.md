@@ -110,8 +110,8 @@ TOGETHER_API_SERVICE_URL=""
 
 ### Running the Backend Server
 Start the FastAPI server using Uvicorn:
-```bash
-uvicorn server:app --reload
+```Console/Terminal
+uvicorn server:app --host 0.0.0.0 --port 8000 --reload
 ```
 This command runs the server in development mode with automatic code reloading.
 
