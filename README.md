@@ -83,7 +83,7 @@ Install the required dependencies. Ensure you have a virtual environment activat
 ```bash
 pip install -r requirements.txt
 ```
-*If you need to create the `requirements.txt`, include the following packages:*
+*following are the packages in `requirements.txt`, need to be installed:*
 ```
 fastapi
 uvicorn
