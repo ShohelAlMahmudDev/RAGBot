@@ -1,6 +1,6 @@
 # RAGBot: Personalized AI Chatbot
 
-RAGBot is an innovative AI chatbot designed to simulate a Software Engineer’s Profile. By utilizing profile data, RAGBot provides personalized, technical, and career-focused advice. The chatbot leverages advanced natural language processing techniques combined with retrieval-augmented generation to generate context-aware responses.
+RAGBot is an innovative AI chatbot designed to simulate a Software Engineer’s Profile. By utilizing profile data, RAGBot provides personalized, technical, and career-focused Information. The chatbot leverages advanced natural language processing techniques combined with retrieval-augmented generation to generate context-aware responses.
 
 ## Table of Contents
 - [Overview](#overview)
@@ -15,12 +15,12 @@ RAGBot is an innovative AI chatbot designed to simulate a Software Engineer’s 
 - [Contact](#contact)
 
 ## Overview
-RAGBot brings together modern frontend and backend technologies to deliver a seamless, engaging chatbot experience. With a user-friendly interface built using HTML5, CSS, JavaScript, and Bootstrap, and a powerful backend powered by FastAPI and a suite of AI libraries, RAGBot is designed for anyone looking to get technical advice or career insights from a Software Engineer’s perspective.
+RAGBot brings together modern frontend and backend technologies to deliver a seamless, engaging chatbot experience. With a user-friendly interface built using HTML5, CSS, JavaScript, and Bootstrap, and a powerful backend powered by FastAPI and a suite of AI libraries, RAGBot is designed for anyone looking to get to know about me can ask to my chatbot.
 
 ## Features
 - **Personalized Responses:** Tailors answers based on the user’s profile data.
 - **Advanced Query Processing:** Uses state-of-the-art retrieval and generation techniques.
-- **Technical Guidance:** Acts as a virtual Software Engineer to answer coding and career-related questions.
+- **Technical Guidance:** Acts as a virtual Software Engineer to answer about the personalized skills and profile related questions.
 - **Responsive Frontend:** Developed with HTML5, CSS, JavaScript, and Bootstrap for a modern UI.
 - **Robust Backend:** Powered by FastAPI, Uvicorn, and AI libraries such as Sentence Transformers, FAISS, LangChain, and pypdf.
 - **Easy Configuration:** Environment-specific settings are managed through dotenv.
@@ -97,24 +97,22 @@ python-dotenv
 ```
 
 ### Frontend Setup
-The frontend is built from static files. These can be served either by your Python backend or any web server. No additional build steps are needed.
+The frontend is built from static files. These can be served by Python backend. No additional build steps are needed.
 
 ## Configuration
 RAGBot uses environment variables to manage API keys, model configurations, and paths to profile data. Create a `.env` file in the root directory with settings similar to:
 ```
-# Example .env file
-API_KEY=your_api_key_here
-MODEL_CONFIG=path/to/your/model/config.json
-PROFILE_DATA_PATH=path/to/your/profile_data.json
+# .env file
+TOGETHER_API_KEY=""
+TOGETHER_API_SERVICE_URL=""
 ```
-*Adjust these values to match your own configuration and deployment environment.*
 
 ## Usage
 
 ### Running the Backend Server
-Start the FastAPI server using Uvicorn. The following command assumes that your FastAPI app is located in `app/main.py` with an app instance named `app`:
+Start the FastAPI server using Uvicorn:
 ```bash
-uvicorn app.main:app --reload
+uvicorn server:app --reload
 ```
 This command runs the server in development mode with automatic code reloading.
 
@@ -127,43 +125,9 @@ Once launched, input your profile data and ask your questions. RAGBot will proce
 ## Folder Structure
 An organized repository structure supports maintainability. A typical structure might be:
 ```
-RAGBot/
-│
-├── app/                    # Backend source code
-│   ├── main.py             # FastAPI application entry point
-│   ├── api/                # API routes and endpoints
-│   ├── models/             # Data models and schemas
-│   └── utils/              # Utility functions (text embedding, PDF processing, etc.)
-│
-├── frontend/               # Frontend static files
-│   ├── index.html          # Main HTML page
-│   ├── css/                # Stylesheets (including Bootstrap)
-│   └── js/                 # JavaScript files for interactivity
-│
-├── .env                    # Environment configuration file
-├── requirements.txt        # Python dependencies
-└── README.md               # Project documentation (this file)
+ ![image](https://github.com/user-attachments/assets/e7a97642-f275-4448-8d3c-c920693be4c1)
+
 ```
-
-## Contributing
-Contributions are welcome and appreciated. To contribute:
-
-1. **Fork the repository**
-2. **Create a new branch:**
-   ```bash
-   git checkout -b feature/your-feature
-   ```
-3. **Commit your changes:**
-   ```bash
-   git commit -m "Add new feature or fix issue"
-   ```
-4. **Push the branch:**
-   ```bash
-   git push origin feature/your-feature
-   ```
-5. **Open a Pull Request (PR)** with a detailed description of your changes.
-
-For significant changes or new features, please open an issue first to discuss your ideas.
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
