@@ -1,6 +1,6 @@
 # RAGBot: Personalized AI Chatbot
 
-RAGBot is an innovative AI chatbot designed to simulate a Software Engineer’s Profile. By utilizing profile data, RAGBot provides personalized, technical, and career-focused Information. The chatbot leverages advanced natural language processing techniques combined with retrieval-augmented generation to generate context-aware responses.
+RAGBot is an innovative AI chatbot designed to simulate a Software Engineer’s Profile. By utilizing profile data, RAGBot provides personalized, technical, and career focused Information. The chatbot leverages advanced natural language processing techniques combined with retrieval augmented generation(RAG) to generate context-aware responses.
 
 ## Table of Contents
 - [Overview](#overview)
