@@ -9,7 +9,6 @@ RAGBot is an innovative AI chatbot designed to simulate a Software Engineer’s 
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Usage](#usage)
-- [Folder Structure](#folder-structure)
 - [Contributing](#contributing)
 - [License](#license)
 - [Contact](#contact)
@@ -122,12 +121,7 @@ This command runs the server in development mode with automatic code reloading.
 
 Once launched, input your profile data and ask your questions. RAGBot will process the input using its retrieval-augmented generation engine and return a personalized response.
 
-## Folder Structure
-An organized repository structure supports maintainability. A typical structure might be:
-```
- ![image](https://github.com/user-attachments/assets/e7a97642-f275-4448-8d3c-c920693be4c1)
 
-```
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
@@ -137,13 +131,3 @@ For questions, suggestions, or contributions, please reach out:
 - **Project Maintainer:** [ShohelAlMahmudDev](https://github.com/ShohelAlMahmudDev)
 - **Email:** shohelcse@yahoo.com
 ```
-
----
-
-### Additional Insights
-
-- **Testing & Debugging:** As you continue developing RAGBot, consider adding a dedicated section for testing—detailing sample input queries and expected output responses.
-- **Deployment:** While this README explains local development, you might include steps for production deployment (using Docker, cloud services, etc.) as your project matures.
-- **Documentation:** For more complex setups or advanced configurations, linking to further documentation or a wiki can be very helpful.
-
-This complete README should provide anyone—whether a contributor or an end user—with clear insights and guidelines to get started with RAGBot. Enjoy enhancing your AI-powered chatbot project!
