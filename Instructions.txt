@@ -1,0 +1,18 @@
+How to Run the Script and Provide the PDF File Path
+
+1. Understanding the Script
+
+The script updates an existing FAISS index with new PDFs stored in a specified folder. It:
+	•	Extracts text from each PDF.
+	•	Splits the text into chunks.
+	•	Converts the text chunks into embeddings using a SentenceTransformer model.
+	•	Adds the new embeddings to an existing FAISS index.
+	•	Saves the updated index.
+
+2. Running the Script
+
+To run the script, follow these steps:
+
+Step 1: Install Required Libraries
+
+Ensure you have all dependencies installed:
